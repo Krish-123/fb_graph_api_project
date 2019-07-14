@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect,HttpResponse,JsonResponse
-from fb_app.helper.fb_utlis import FbUtils
+from fb_app.helper.fb_oauth_utlis import FbUtils
 from fb_app.helper.user_info_db_utils import UserInfoDBUtils
 from fb_app.helper.post_login_functionality import post_login_functionality
+from fb_app.helper.get_user_info import get_user_info
 from fb_graph_api.config import *
 
 
@@ -26,3 +27,10 @@ def login_redirect(request):
 def access_token(request):
     user_object = UserInfoDBUtils()
     return HttpResponse(user_object.insert_or_update_user_info_in_DB())
+
+
+def user_info(request):
+    user_id = 1081084118761604
+    user_info = get_user_info(user_id)
+
+    return JsonResponse(user_info,safe=False)

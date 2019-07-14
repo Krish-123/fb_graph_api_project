@@ -7,6 +7,7 @@ fb_api_root = "https://graph.facebook.com/"
 fb_end_point_for_code_exchange = "https://graph.facebook.com/v3.3/oauth/access_token?client_id={}&redirect_uri={}&client_secret={}&code={}"
 fb_end_pont_for_token_inspection = "https://graph.facebook.com/debug_token?input_token={}&access_token={}"
 fb_login_dialog = "https://www.facebook.com/v3.3/dialog/oauth?client_id={}&redirect_uri={}&state={}&response_type={}&scope={}"
+fb_end_point_for_user_info = "https://graph.facebook.com/{}?fields={}&access_token={}"
 
 fb_access_permissions = 'user_birthday,user_hometown,user_location,user_friends,user_gender,email,public_profile,user_photos,user_location,user_posts'
 login_redirect_uri = 'http://localhost:8080/fbapp/postlogin/'

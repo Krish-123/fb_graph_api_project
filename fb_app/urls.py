@@ -7,4 +7,5 @@ urlpatterns = [
     path('fblogin/',views.fb_login,name='fb_login'),
     path('postlogin/',views.login_redirect,name='login_redirect'),
     path('access_token/',views.access_token,name='access_token'),
+    path('userinfo/',views.user_info,name='user_info')
 ]

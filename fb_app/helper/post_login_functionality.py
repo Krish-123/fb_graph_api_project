@@ -1,4 +1,4 @@
-from fb_app.helper.fb_utlis import FbUtils
+from fb_app.helper.fb_oauth_utlis import FbUtils
 from fb_app.helper.user_info_db_utils import UserInfoDBUtils
 
 
