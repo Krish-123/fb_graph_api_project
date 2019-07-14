@@ -8,6 +8,7 @@ class UserInfo(models.Model):
     issued_at = models.IntegerField()
     data_access_expires_at = models.IntegerField()
     token_expires_at = models.IntegerField()
+    scopes = models.TextField()
 
     def __repr__(self):
         return self.user_id
